@@ -11,7 +11,7 @@ Servo servo_1;
 int pos = 0; 
 int switchState; 
 const int CLOSED=110;
-const int MIDPOINT=90;
+const int MIDPOINT=70;
 
 
 void setColor(int r, int g, int b) {
@@ -31,27 +31,49 @@ void setup() {
 //102 = closed
 //0 = open (pressing switch)
 
+int nCol = 128;
+bool ascending=true;
+int nRun=0;
+
 void loop(){ 
-  setColor(128,0,128);
+  setColor(nCol,0,nCol);
   switchState = digitalRead(10); 
   if(switchState==LOW) { 
+    nRun++;
     setColor(0,255,0);
-    servo_1.attach(9); 
-    switch(random(1,5)){
-      case 1:
-        seqNormal();
-        break;
-      case 2:
-        seqShy();
-        break;
-      default:
-        seqNormal();
-        break;
+    servo_1.attach(9);
+    if(nRun<3){
+      seqNormal();
+    } else {
+      switch(random(1,6)){
+        case 1:
+        case 2:
+          seqShy();
+          break;
+        case 3:
+          seqAngry();
+          break;      
+        default:
+          seqNormal();
+          break;
+      }
     }
+    setColor(nCol,0,nCol);        
     delay(150);    
     servo_1.detach();
   } 
-  delay(5); 
+  if(ascending){
+    nCol+=1;
+  } else {
+    nCol-=1;
+  }
+  if(nCol>254){    
+    ascending=false;
+  }
+  if(nCol<129){
+    ascending=true;
+  }
+  delay(20); 
   if(random(1, 6000)==1){
     servo_1.attach(9); 
     peek();
@@ -69,12 +91,39 @@ void peek(){
 void seqShy(){
   delay(50);
   moveArm(MIDPOINT,5);
-  delay(500);
-  moveArm(MIDPOINT+10,5);
-  delay(500);
+  delay(250);
+  moveArm(MIDPOINT+10,0);
+  delay(150);
   moveArm(0,0);
-  delay(300);
+  delay(250);
   moveArm(CLOSED,0);
+}
+
+void seqAngry(){  
+  
+  delay(50);
+  moveArm(0,0);  
+  delay(250);  
+  
+  setColor(255,0,0);
+  moveArm(40,5);
+  setColor(0,255,0);
+  moveArm(0,0);
+  delay(50);
+
+  setColor(255,0,0);
+  moveArm(40,5);
+  setColor(0,255,0);
+  moveArm(0,0);
+  delay(50);
+
+  setColor(255,0,0);
+  moveArm(40,5);
+  setColor(0,255,0);
+  moveArm(0,0);
+  delay(50);
+  
+  moveArm(CLOSED,0);  
 }
 
 void seqNormal(){
