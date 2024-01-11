@@ -5,7 +5,7 @@
 #define PIN 6
 #define NUMPIXELS 1
 
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800); // neo pixel object that is used to control the LED strip
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 Servo servo_1; 
 int pos = 0; 
