@@ -1,4 +1,4 @@
-Third-Party Notices
+# Third-Party Notices
 This project incorporates material from the projects listed below. The original material was modified to create derived material used in this project. The kind gesture of these open-source contributors is gratefully acknowledged.
 
 Useless Arduino Model
