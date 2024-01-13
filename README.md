@@ -16,7 +16,7 @@ This was originally created as a Secret Santa gift for our office gift exchange 
 
 ![Schematic](Docs/Schematic.jpg)
 
-3. **Program the Unit** - I recommend programming the unit before fully installing it in the case so as to calibrate the position of the arm on the servo.  Once inside the case, this position is harder to adjust and, if positioned incorrectly, may result in damage to the unit.  [Seeed's Wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) has great instructions for setting up the development environment.
+3. **Program the Unit** - [Seeed's Wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) has great instructions for setting up the development environment.  I recommend programming the unit before fully installing it in the case.  Outside of the case, it's fairly easy to adjust the position of the arm on the servo.  Once inside the case, this position is harder to adjust and, if positioned incorrectly, may result in damage to the unit.  
 
 *A note on the ESP32: The original unit was built with an Arduino Uno using FastLED and the built-in Servo library.  Neither of these libraries work on the ESP32 so conditional compilation was added to support both the Uno and ESP32-based Arduinos.  Note that some Servo and some Addressable LED libraries take advantage of the ESP32's hardware timers--in some cases, both libraries use the same hardware timer, causing unpredictable behavior.  If you try with a different library and you run into trouble, try commenting out the LED libraries and code to simply establish baseline operation with the servo.*
 
