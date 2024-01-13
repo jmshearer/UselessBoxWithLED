@@ -6,7 +6,7 @@ This project incorporates material from the projects listed below. The original 
 
 ## Useless Arduino Model
 - **License**: [Creative Commons - Attribution - Share Alike license](https://creativecommons.org/licenses/by-sa/3.0/)
-- **Source**: [Thingiverse](https://www.thingiverse.com/thing:3643947](https://www.thingiverse.com/thing:415296)
+- **Source**: [Thingiverse](https://www.thingiverse.com/thing:415296)
 - **Author**: SjFleischmann
 
 **You are free to:**
