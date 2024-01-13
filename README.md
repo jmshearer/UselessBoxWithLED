@@ -35,7 +35,7 @@ Your LED may differ significantly from the one pictured; virtually any WS2812B (
 The astute reader may notice the presence of the BLE/WIFI antenna...the XIAO ESP32C23 has BLE/WIFI capabilities so why not include the antenna?  The implementation of this feature will be left as an exercise for the reader.  You do not need to connect the antenna if you're simply using the default program.
 
 ## Teaching Opportunities
-This unit provides a great platform for education; it can cost less than $10 per unit and can be used for a variety of lessons.  Here are some suggestions for additional areas of expansion:
+This unit provides a great platform for education; it can cost less than $10 per unit and can be easily modified.  Despite its simplicity and inherent uselessness, people tend to have a great reaction to the project--it's easily understood and humorous; people want to interact and show it off.  Here are some suggestions for additional areas of expansion:
 
 1. **Customize the case** (easy) - Add a name or instruction text on the top of the case.
 2. **Customize the LED colors** (easy) - What color says "good" and "bad" to you?  Customize the predefined color constants. [Here's a source for finding RGB values](https://www.w3schools.com/colors/colors_picker.asp)
