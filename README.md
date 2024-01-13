@@ -41,7 +41,7 @@ This unit provides a great platform for education; it can cost less than $10 per
 2. **Customize the LED colors** (easy) - What color says "good" and "bad" to you?  Customize the predefined color constants. [Here's a source for finding RGB values](https://www.w3schools.com/colors/colors_picker.asp)
 4. **Add additional random sequences** (moderate) - Increase the random number range and randomly select additional sequences.  Should it move slower?  Faster?  Does it poke out slightly, retract, and then wait for a second before springing out to shut off the switch?  Think about an animal popping out of a hole to grab a piece of food--how would it behave?  How does this organic behavior translate to a mechanical device?
 5. **Add additional non-random sequences** (moderate to difficult) - Does the box get upset after you throw the switch too many times?  Does it start ignoring repeated flips?  Maybe there's an Easter Egg when a specific on/off sequence is detected.
-7. **Use the BLE/WIFI antenna** (advanced) - Control the device from your phone or over the Internet.  Perhaps the LED becomes an indicator of some signal on the Internet (stock market, weather, etc) or maybe the switch actually does something in the real world.  The possibilities are endless.
+7. **Use the BLE/WIFI radio** (advanced) - Control the device from your phone or over the Internet.  Perhaps the LED becomes an indicator of some signal on the Internet (stock market, weather, etc) or maybe the switch actually does something in the real world.  The possibilities are endless!
 
 
 ## References
