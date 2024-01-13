@@ -1,5 +1,5 @@
 # Useless Box with LED
-This was originally created as a Secret Santa gift for our office gift exchange but quickly became a fun item to teach some STEM basics, based on [this project on Thingiverse](https://www.thingiverse.com/thing:415296).  This version adds some "personality" and an optional multicolor LED.
+This was originally created as a Secret Santa gift for our office gift exchange but quickly became a fun item to teach some STEM basics.  It is based on [this project on Thingiverse](https://www.thingiverse.com/thing:415296).  This version adds some "personality" and an optional multicolor LED.
 
 ![Useless Box Animated GIF](Docs/Sample.gif)
 
