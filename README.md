@@ -21,9 +21,10 @@ This was originally created as a Secret Santa gift for our office gift exchange 
 *A note on the ESP32: The original unit was built with an Arduino Uno using FastLED and the built-in Servo library.  Neither of these libraries work on the ESP32 so conditional compilation was added to support both the Uno and ESP32-based Arduinos.  Note that some Servo and some Addressable LED libraries take advantage of the ESP32's hardware timers--in some cases, both libraries use the same hardware timer, causing unpredictable behavior.  If you try with a different library and you run into trouble, try commenting out the LED libraries and code to simply establish baseline operation with the servo.*
 
 4. **Test and install the mechanical pieces**
-  - **Snap the microcontroller "upside-down" into the holder by the USB port opening.**  This can be a bit tricky; you will need to make sure the USB-C port protrudes into the wall of the computer and will need to press firmly on the rear of the PCB to snap it below the nubs holding it in place.  If the microcontroller breaks loose during normal operation due to strain on the USB port, you can add a dab of hot glue at the rear of the PCB to keep it from popping up.
-  - **Test and install servo** I strongly recommend loosely connecting the arm to the servo before putting the servo in the case.  Try holding the servo in place while actuating the switch to find the right angle for the arm.
-  - **Install the switch** Be sure the switch is in the "On" position when closest to the arm, and "Off" when away from the arm.
+   
+    1. **Snap the microcontroller "upside-down" into the holder by the USB port opening.**  This can be a bit tricky; you will need to make sure the USB-C port protrudes into the wall of the computer and will need to press firmly on the rear of the PCB to snap it below the nubs holding it in place.  If the microcontroller breaks loose during normal operation due to strain on the USB port, you can add a dab of hot glue at the rear of the PCB to keep it from popping up.
+    2. **Test and install servo** I strongly recommend loosely connecting the arm to the servo before putting the servo in the case.  Try holding the servo in place while actuating the switch to find the right angle for the arm.
+    3. **Install the switch** Be sure the switch is in the "On" position when closest to the arm, and "Off" when away from the arm.
 
 The inside of the assembled case should resemble this:
 
