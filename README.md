@@ -1,11 +1,28 @@
 # Useless Box with LED
 Originally created as a Secret Santa gift and as an item to teach some STEM basics, based on [Original Project](https://www.thingiverse.com/thing:415296).  This version adds some "personality" and an optional multicolor LED.
 
+![Useless Box Animated GIF](Docs/Sample.gif)
+
 ## Materials
 - SG90 Micro Servo Motor, available from many sources.  [Here's a 5-pack](https://www.amazon.com/Dorhea-Arduino-Helicopter-Airplane-Walking/dp/B07Q6JGWNV/) and [One on Digikey](https://www.digikey.com/en/products/detail/gearbox-labs/PART-MICRO-SERVO-SG-90-ANALOG/16159912)
 - XIAO ESP32C23 Microcontroller [Seeed Studio](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) | [Buy on digikey](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/113991054/16652880)
-- SPST or SPDT Toggle Swtich [Here's one from DigiKey](https://www.digikey.com/en/products/detail/nte-electronics,-inc/54-301PC/11647755)
+- SPST or SPDT Toggle Switch [Here's one from DigiKey](https://www.digikey.com/en/products/detail/nte-electronics,-inc/54-301PC/11647755)
 - Optional 5V WS2812B LED - Available from many sources.  You can potentially just cut one off of an existing string.
+
+## Assembly
+Follow the [excellent instructions by SjFleischmann](https://www.thingiverse.com/thing:415296) to print and assemble the case.  The STLs in this repo are tailored for the Seeed XIAO controllers.  Note the addition of the optional LED.
+
+![Schematic](Docs/Schematic.jpg)
+
+Note how the parts fit together:
+
+![Inside view of case](Docs/Assembly.jpg)
+
+The astute reader may notice the presence of the BLE/WIFI antenna...the implementation of this feature will be left as an exercise for the reader!
+
+
+## Tips on connecting the servo
+I strongly recommend loosely connecting the arm to the servo before putting the servo in the case.  Try holding the servo in place while actuating the switch to find the right angle for the arm.
 
 ## References
 - [Original Project](https://www.thingiverse.com/thing:415296)
