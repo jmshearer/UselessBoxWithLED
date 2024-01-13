@@ -70,23 +70,27 @@ void setup() {
   randomSeed(analogRead(0));   
   setServo(CLOSED);
   pixels.begin(); 
-} 
+}
 
 
+int nRun=0;               //Count the # of runs to do different things intentionally occasionally
+int nBrightness = 128;    //Initial brighness
+int brightnessDelta = 1;  //Change in brightness on each pass
 
-bool ascending=true;
-int nRun=0;
-int nBrightness = 128;
-int brightnessDelta = 1;
+void loop(){
 
-void loop(){   
   setColor(COLOR_IDLE, nBrightness);
-  if(digitalRead(SWITCH_PIN)==LOW) { 
+
+  //Check to see if the switch is on
+  if(digitalRead(SWITCH_PIN)==LOW) {     
     nRun++;
     setColor(COLOR_RUNNING);
+    
     if(nRun<3){
+      //Make sure we just do the normal sequence the first 3 times
       seqNormal();
     } else {
+      //And then add a little spice after the 3rd time      
       switch(random(1,6)){
         case 1:
         case 2:
@@ -104,6 +108,7 @@ void loop(){
     delay(150);        
   } 
 
+  //Change the brighness
   nBrightness += brightnessDelta;
   if(nBrightness>254){
     brightnessDelta=-1;
@@ -112,7 +117,10 @@ void loop(){
     brightnessDelta=1;
   }  
 
+  //Wait for a little
   delay(20); 
+
+  //And occasionally peek out of the top, just to create some action
   if(random(1, 6000)==1){    
     peek();    
   }
@@ -123,6 +131,17 @@ void peek(){
   moveArm(MIDPOINT,10);
   delay(750);
   moveArm(CLOSED,0);
+}
+
+/************************************************************
+ * Various sequences
+ ************************************************************/
+
+void seqNormal(){
+  delay(50); 
+  moveArm(OPEN,0);
+  delay(300); 
+  moveArm(CLOSED,5);
 }
 
 void seqShy(){
@@ -152,14 +171,11 @@ void seqAngry(){
   moveArm(CLOSED,0);  
 }
 
-void seqNormal(){
-  delay(50); 
-  moveArm(OPEN,0);
-  delay(300); 
-  moveArm(CLOSED,5);
-}
 
-
+//The moveArm routine is designed to slowly move the servo
+//Note that when using moveArm(...,0), it moves "instantly" but
+//the code should implement a delay after calling moveArm(...,0)
+//to allow the servo to reach the new position.
 void moveArm(int newPos, int ms){      
   if(ms>0){    
     if(newPos>lastServoPosition){
