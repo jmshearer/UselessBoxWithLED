@@ -10,19 +10,16 @@ Originally created as a Secret Santa gift and as an item to teach some STEM basi
 - Optional 5V WS2812B LED - Available from many sources.  You can potentially just cut one off of an existing string.
 
 ## Assembly
-Follow the [excellent instructions by SjFleischmann](https://www.thingiverse.com/thing:415296) to print and assemble the case.  The STLs in this repo are tailored for the Seeed XIAO controllers.  Note the addition of the optional LED.
+Follow the [excellent instructions by SjFleischmann](https://www.thingiverse.com/thing:415296) to print and assemble the case.  The STLs in this repo are tailored for the Seeed XIAO controllers though you can follow SjFleischmann's instructions to print a base for an Arduino Uno.  Note the addition of the optional LED.
 
 ![Schematic](Docs/Schematic.jpg)
 
-Note how the parts fit together:
+Assemble the pieces into the case.  I strongly recommend loosely connecting the arm to the servo before putting the servo in the case.  Try holding the servo in place while actuating the switch to find the right angle for the arm.
 
 ![Inside view of case](Docs/Assembly.jpg)
 
-The astute reader may notice the presence of the BLE/WIFI antenna...the implementation of this feature will be left as an exercise for the reader!
+The astute reader may notice the presence of the BLE/WIFI antenna...the XIAO ESP32C23 has BLE/WIFI capabilities so why not include the antenna?  The implementation of this feature will be left as an exercise for the reader.
 
-
-## Tips on connecting the servo
-I strongly recommend loosely connecting the arm to the servo before putting the servo in the case.  Try holding the servo in place while actuating the switch to find the right angle for the arm.
 
 ## References
 - [Original Project](https://www.thingiverse.com/thing:415296)
